@@ -1,0 +1,180 @@
+// Create the classes for the boxes
+@each $size in $em-sizes {
+    .padding-#{$size} {
+        padding: #{$size}em;
+    }
+
+    .padding-#{$size}-small {
+        @media(max-width : $screen-desktop) {
+            padding: #{$size}em;
+        }
+    }
+
+    .padding-#{$size}-desktop {
+        @media(min-width : $screen-desktop) {
+            padding: #{$size}em;
+        }
+    }
+
+    .padding-#{$size}-5 {
+        padding: #{$size + 0.5}em;
+    }
+
+    .padding-#{$size}-6 {
+        padding: #{$size + 0.6}em;
+    }
+
+    .padding-#{$size}-5-small {
+        @media(max-width : $screen-desktop) {
+            padding: #{$size + 0.5}em;
+        }
+    }
+
+    .padding-#{$size}-5-desktop {
+        @media(min-width : $screen-desktop) {
+            padding: #{$size + 0.5}em;
+        }
+    }
+
+    .margin-#{$size} {
+        margin: #{$size}em;
+    }
+
+    .margin-#{$size}-small {
+        @media(max-width : $screen-desktop) {
+            margin: #{$size}em;
+        }
+    }
+
+    .margin-#{$size}-desktop {
+        @media(min-width : $screen-desktop) {
+            margin: #{$size}em;
+        }
+    }
+
+    .margin-#{$size}-5 {
+        margin: #{$size + 0.5}em;
+    }
+
+    .margin-#{$size}-5-small {
+        @media(max-width : $screen-desktop) {
+            margin: #{$size + 0.5}em;
+        }
+    }
+
+    .margin-#{$size}-5-desktop {
+        @media(min-width : $screen-desktop) {
+            margin: #{$size + 0.5}em;
+        }
+    }
+    @each $border in $borders {
+        .padding-#{$border}-#{$size} {
+            padding-#{$border}: #{$size}em !important;
+        }
+
+        .padding-#{$border}-#{$size}-desktop {
+            @media(min-width : $screen-desktop) {
+                padding-#{$border}: #{$size}em !important;
+            }
+        }
+
+        .padding-#{$border}-#{$size}-small {
+            @media(max-width : $screen-desktop) {
+                padding-#{$border}: #{$size}em !important;
+            }
+        }
+
+        .padding-#{$border}-#{$size}-5 {
+            padding-#{$border}: #{$size + 0.5}em !important;
+        }
+
+        .padding-#{$border}-#{$size}-5-desktop {
+            @media(min-width : $screen-desktop) {
+                padding-#{$border}: #{$size + 0.5}em !important;
+            }
+        }
+
+        .padding-#{$border}-#{$size}-5-small {
+            @media(max-width : $screen-desktop) {
+                padding-#{$border}: #{$size + 0.5}em !important;
+            }
+        }
+
+        .padding-#{$border}-#{$size}-6 {
+            padding-#{$border}: #{$size + 0.6}em !important;
+        }
+
+        .padding-#{$border}-#{$size}-6-desktop {
+            @media(min-width : $screen-desktop) {
+                padding-#{$border}: #{$size + 0.6}em !important;
+            }
+        }
+
+        .padding-#{$border}-#{$size}-6-small {
+            @media(max-width : $screen-desktop) {
+                padding-#{$border}: #{$size + 0.6}em !important;
+            }
+        }
+
+        .margin-#{$border}-#{$size} {
+            margin-#{$border}: #{$size}em !important;
+        }
+
+        .margin-#{$border}-#{$size}-desktop {
+            @media(min-width : $screen-desktop) {
+                margin-#{$border}: #{$size}em !important;
+            }
+        }
+
+        .margin-#{$border}-#{$size}-small {
+            @media(max-width : $screen-desktop) {
+                margin-#{$border}: #{$size}em !important;
+            }
+        }
+
+        .margin-#{$border}-#{$size}-5 {
+            margin-#{$border}: #{$size + 0.5}em !important;
+        }
+
+        .margin-#{$border}-#{$size}-5-desktop {
+            @media(min-width : $screen-desktop) {
+                margin-#{$border}: #{$size + 0.5}em !important;
+            }
+        }
+
+        .margin-#{$border}-#{$size}-5-small {
+            @media(max-width : $screen-desktop) {
+                margin-#{$border}: #{$size + 0.5}em !important;
+            }
+        }
+    }
+}
+
+body, html{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+}
+
+p{
+  font-weight: 300;
+}
+
+.syntaxhighlighter .toolbar {
+    display: none !important;
+}
+
+.syntaxhighlighter code{
+  font-family: inherit !important;
+}
+
+.syntaxhighlighter{
+  margin: 0 !important;
+}
+
+.syntaxhighlighter table td.code {
+    padding: 0.7em !important;
+}
+
+.large-menu{
+  background: #f1f1f1;
+}

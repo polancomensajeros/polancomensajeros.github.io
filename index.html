@@ -1,0 +1,742 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API docs mensajeros urbanos</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+    <script src="https://use.fontawesome.com/fd1eb38739.js"></script>
+
+    <script type="text/javascript" src="assets/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+    <script type="text/javascript" src="assets/syntaxhighlighter_3.0.83/scripts/SHBRUSHJSON.JS"></script>
+
+    <link href="assets/syntaxhighlighter_3.0.83/styles/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="assets/syntaxhighlighter_3.0.83/styles/shThemeRDark.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
+    <div data-sticky-container>
+      <ul class="menu vertical" data-magellan data-sticky data-anchor="magex2">
+          <li><a href="#linkmag1"><i class="fa fa-chevron-right"></i> Credenciales de app</a></li>
+          <li>
+              <a href="#linkmag2" class="padding-bottom-0">
+                  <i class="fa fa-chevron-right"></i> Autenticación
+              </a>
+          </li>
+          <li><a href="#linkmag3" class="padding-bottom-0"><i class="fa fa-chevron-right"></i> Servicios</a></li>
+          <li><a href="#linkmag3" class="small-li"> Calcular valor de un servicio</a></li>
+          <li><a href="#linkmag4" class="small-li"> Crear un servicio</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="off-canvas-content" data-off-canvas-content>
+    <div data-sticky-container>
+        <div class="title-bar" data-sticky data-options="marginTop:0;" style="width:100%">
+            <div class="title-bar-left show-for-large">
+                <img src="img/mu-logo.png" alt="Mensajeros urbanos" class="logo">
+            </div>
+            <div class="title-bar-left hide-for-large" data-toggle="offCanvas">
+                <i class="fa fa-bars off-canvas-trigger"></i>
+            </div>
+            <div class="title-bar-right hide-for-large">
+                <img src="img/mu-logo.png" alt="Mensajeros urbanos" class="logo">
+            </div>
+        </div>
+    </div>
+
+    <div class="row main-container" data-equalizer>
+        <div class="large-3 small-12 columns large-menu" data-sticky-container data-equalizer-watch>
+            <div class="sticky show-for-large" data-sticky data-anchor="magex1">
+                <aside>
+                    <ul class="menu vertical" data-magellan>
+                        <li><a href="#linkmag1"><i class="fa fa-chevron-right"></i> Credenciales de app</a></li>
+                        <li>
+                            <a href="#linkmag2">
+                                <i class="fa fa-chevron-right"></i> Autenticación
+                            </a>
+                        </li>
+                        <li><a href="#linkmag3" class="padding-bottom-0"><i class="fa fa-chevron-right"></i> Servicios</a></li>
+                        <li><a href="#linkmag3" class="small-li padding-bottom-0"> Calcular valor de un servicio</a></li>
+                        <li><a href="#linkmag4" class="small-li padding-bottom-0"> Crear un servicio</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+        <div id="magex1" class="large-9 small-12 columns padding-right-0-desktop" data-equalizer-watch>
+            <section id="linkmag1" data-magellan-target="linkmag1" class="row">
+                <div class="large-5 small-12 columns">
+                    <br>
+                    <h4>Credenciales de aplicación</h4>
+                    <p>
+                        Con las siguientes credenciales de aplicación podrá realizar los procesos de autenticación con OAuth y obtener el token de acceso para consumir los servicios disponibles.
+                    </p>
+                </div>
+                <div class="large-7 small-12 columns dark-block">
+                    <br>
+                    <div class="title">
+                        <h5>Credenciales</h5>
+                    </div>
+                    <div class="pair row">
+                        <div class="large-5 small-12 columns padding-0">
+                            <span class="property">Client ID</span>
+                        </div>
+                        <div class="large-7 small-12 columns padding-0">
+                            <span class="value">**************************</span>
+                        </div>
+                    </div>
+                    <div class="pair row">
+                        <div class="large-5 small-12 columns padding-0">
+                            <span class="property">Client secret</span>
+                        </div>
+                        <div class="large-7 small-12 columns padding-0">
+                            <span class="value">**************************</span>
+                        </div>
+                    </div>
+                    <div class="pair row">
+                        <div class="large-5 small-12 columns padding-0">
+                            <span class="property">User ID</span>
+                        </div>
+                        <div class="large-7 small-12 columns padding-0">
+                            <span class="value">*****</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="linkmag2" data-magellan-target="linkmag2" class="row">
+                <div class="large-5 small-12 columns">
+                    <br>
+                    <h4>Autenticación</h4>
+                    <p>
+                        Corresponde a la autenticación que realiza una aplicación con el fin de obtener un token de acceso que usará en el futuro para consumir los diferentes servicios expuestos por Mensajeros Urbanos.
+                    </p>
+                </div>
+                <div class="large-7 small-12 columns dark-block">
+                    <br>
+                    <div class="title">
+                        <h5>Cómo consumir el servicio</h5>
+                    </div>
+                    <div class="pair row">
+                        <div class="large-5 small-12 columns padding-0">
+                            <span class="property">API Endpoint</span>
+                        </div>
+                        <div class="large-7 small-12 columns padding-0">
+                            <span class="value">http://dev.api.mensajerosurbanos.com/oauth/token</span>
+                        </div>
+                    </div>
+                    <div class="pair row">
+                        <div class="large-5 small-12 columns padding-0">
+                            <span class="property">Método de consumo</span>
+                        </div>
+                        <div class="large-7 small-12 columns padding-0">
+                            <span class="value">POST</span>
+                        </div>
+                    </div>
+                    <div class="pair row">
+                        <div class="large-5 small-12 columns padding-0">
+                            <span class="property">Parámetros header</span>
+                        </div>
+                        <div class="large-7 small-12 columns padding-0">
+                            <p class="value margin-0">
+                                <span>Content-Type: application/x-www-form-urlencoded</span><br>
+                                <span>client_id: xxxxxxxxx</span><br>
+                                <span>client_secret: xxxxxxxxxx</span><br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pair row">
+                        <div class="large-5 small-12 columns padding-0">
+                            <span class="property">Parámetros post</span>
+                        </div>
+                        <div class="large-7 small-12 columns padding-0">
+                            <span class="value margin-0">
+                      grant_type: client_credentials
+                    </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="large-5 small-12 columns padding-top-1">
+                    <h5>Estado HTTP</h5>
+                    <div class="pair row padding-left-1">
+                        <div class="large-5 small-12 columns padding-0">
+                            <span class="property">200 - OK</span>
+                        </div>
+                        <div class="large-7 small-12 columns padding-0">
+                            <span class="value margin-0">
+                      Todo funciona como se espera
+                    </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="large-7 small-12 columns dark-block">
+                    <h5>Respuesta exitosa</h5>
+                    <pre class="brush: json;">
+                      {
+                          "access_token": "d0590dfe87126ba6e8993ade0407307282cb693c"
+                          "expires_in": 3600
+                          "token_type": "Bearer"
+                          "scope": null
+                      }
+                    </pre>
+                </div>
+                <div class="large-5 small-12 columns padding-top-1">
+                    <div class="pair row padding-left-1">
+                        <div class="large-5 small-12 columns padding-0">
+                            <span class="property">400 - Bad Request</span>
+                        </div>
+                        <div class="large-7 small-12 columns padding-0">
+                            <span class="value margin-0">
+                      Si no se envía el parámetro <small class="var">grant_type</small> por post
+                    </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="large-7 small-12 columns dark-block">
+                    <h5>Posibles errores</h5>
+                    <pre class="brush: json;">
+                      {
+                          "error": "invalid_request",
+                          "error_description": "The grant type was not specified in the request"
+                      }
+                    </pre>
+                </div>
+                <div class="large-5 small-12 columns padding-top-1">
+                    <div class="pair row padding-left-1">
+                        <div class="large-5 small-12 columns padding-0">
+                            <span class="property"> </span>
+                        </div>
+                        <div class="large-7 small-12 columns padding-0">
+                            <span class="value margin-0">
+                      Si el <small class="var">grant_type</small> enviado no es válido
+                    </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="large-7 small-12 columns dark-block">
+                  <pre class="brush: json;">
+                    {
+                        "error": "unsupported_grant_type",
+                        "error_description": "Grant type \"xxxxxx\" not supported"
+                    }
+                  </pre>
+                </div>
+                <div class="large-5 small-12 columns padding-top-1">
+                    <div class="pair row padding-left-1">
+                        <div class="large-5 small-12 columns padding-0">
+                            <span class="property"> </span>
+                        </div>
+                        <div class="large-7 small-12 columns padding-0">
+                            <span class="value margin-0">
+                      Si no se envían las credenciales en el header
+                    </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="large-7 small-12 columns dark-block">
+                  <pre class="brush: json;">
+                    {
+                        "error": "invalid_client",
+                        "error_description": "client credentials are required"
+                    }
+                  </pre>
+                </div>
+                <div class="large-5 small-12 columns padding-top-1">
+                    <div class="pair row padding-left-1">
+                        <div class="large-5 small-12 columns padding-0">
+                            <span class="property"> </span>
+                        </div>
+                        <div class="large-7 small-12 columns padding-0">
+                            <span class="value margin-0">
+                      Si las credenciales enviadas son inválidas
+                    </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="large-7 small-12 columns dark-block">
+                  <pre class="brush: json;">
+                    {
+                        "error": "invalid_client",
+                        "error_description": "The client credentials are invalid"
+                    }
+                  </pre>
+                </div>
+            </section>
+            <section id="linkmag3" data-magellan-target="linkmag3" class="row">
+              <div class="large-5 small-12 columns">
+                  <br>
+                  <h4>Servicios</h4>
+                  <h5>Calcular el valor de un servicio</h5>
+                  <p>
+                      Corresponde al cálculo que se realiza teniendo en cuenta todas las variables que involucra un servicio determinado (Ciudad, recargos, distancia, descuentos, etc.)
+                  </p>
+              </div>
+              <div class="large-7 small-12 columns dark-block">
+                  <br>
+                  <div class="title">
+                      <h5>Cómo consumir el servicio</h5>
+                  </div>
+                  <div class="pair row">
+                      <div class="large-5 small-12 columns padding-0">
+                          <span class="property">API Endpoint</span>
+                      </div>
+                      <div class="large-7 small-12 columns padding-0">
+                          <span class="value">http://dev.api.mensajerosurbanos.com/delivery/calculation</span>
+                      </div>
+                  </div>
+                  <div class="pair row">
+                      <div class="large-5 small-12 columns padding-0">
+                          <span class="property">Método de consumo</span>
+                      </div>
+                      <div class="large-7 small-12 columns padding-0">
+                          <span class="value">POST</span>
+                      </div>
+                  </div>
+                  <div class="pair row">
+                      <div class="large-5 small-12 columns padding-0">
+                          <span class="property">Parámetros header</span>
+                      </div>
+                      <div class="large-7 small-12 columns padding-0">
+                          <p class="value margin-0">
+                              <span>Content-Type: application/json</span><br>
+                              <span>access_token: XXXXXX</span><br>
+                          </p>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="large-5 small-12 columns">
+                <h5>Atributos</h5>
+                <div class="attribute row">
+                  <div class="small-3 columns attr">Nombre</div>
+                  <div class="small-3 columns attr">Tipo</div>
+                  <div class="small-3 columns attr">Descripción</div>
+                  <div class="small-3 columns attr"></div>
+                </div>
+                <div class="attribute row">
+                  <div class="small-3 columns attr">id_user</div>
+                  <div class="small-3 columns">Entero</div>
+                  <div class="small-3 columns">ID de usuario</div>
+                  <div class="small-3 columns"></div>
+                </div>
+                <div class="attribute row">
+                  <div class="small-3 columns attr">type_service</div>
+                  <div class="small-3 columns">Entero</div>
+                  <div class="small-3 columns">Tipo de servicio</div>
+                  <div class="small-3 columns"></div>
+                </div>
+                <div class="attribute row">
+                  <div class="small-3 columns attr">roundtrip</div>
+                  <div class="small-3 columns">Entero</div>
+                  <div class="small-3 columns">Ida y vuelta</div>
+                  <div class="small-3 columns">1 = Si, 0 = No</div>
+                </div>
+                <div class="attribute row">
+                  <div class="small-3 columns attr">city</div>
+                  <div class="small-3 columns">Entero</div>
+                  <div class="small-3 columns">Ciudad</div>
+                  <div class="small-3 columns">1=Bogotá, 2=Cali, 3=Medellín, 4=Barranquilla </div>
+                </div>
+                <div class="attribute row">
+                  <div class="small-3 columns attr">coordinates type</div>
+                  <div class="small-3 columns">Entero</div>
+                  <div class="small-3 columns"></div>
+                  <div class="small-3 columns">0=Recogida, 1=Entrega</div>
+                </div>
+                <div class="attribute row">
+                  <div class="small-3 columns attr">coordinates id_point</div>
+                  <div class="small-3 columns">Entero</div>
+                  <div class="small-3 columns"></div>
+                  <div class="small-3 columns">Id del  punto</div>
+                </div>
+              </div>
+              <div class="large-7 small-12 columns dark-block padding-top-0">
+                <div class="pair row">
+                    <div class="large-12 small-12 columns padding-0">
+                        <span class="property">Parámetros post-body raw</span>
+                        <pre class="brush: json;">
+                          {
+                              "id_user": XXXX,//ID de usuario
+                              "type_service": 4, //Tipo de servicio
+                              "roundtrip": 1, //Ida y vuelta 1=si; 0:No
+                              "city":1,//1->Bogotá 2->Cali 3->Medellín 4->Barranquilla 5-Villavicencio
+                              "coordinates": [
+                                  {
+                                      "type": "0",//0->Recogida,1->Entrega
+                                      "id_point": "1",//Id del  punto
+                                      "lng": "-74.050461658",
+                                      "lat": "4.6762105880001",
+                                      "address": "cra 14b 112 45",
+                                      "city":"bogota",
+                                  }, {
+                                      "type": "1",
+                                      "address": "cra 15 127 ",
+                                      "city":"bogota",
+                                  }
+                              ]
+                          }
+                        </pre>
+                    </div>
+                </div>
+              </div>
+
+              <div class="small-12 columns padding-0">
+                <div class="large-5 small-12 columns padding-top-1">
+                    <h5>Estado HTTP</h5>
+                    <div class="pair row padding-left-1">
+                        <div class="large-5 small-12 columns padding-0">
+                            <span class="property">200 - OK</span>
+                        </div>
+                        <div class="large-7 small-12 columns padding-0">
+                            <span class="value margin-0">
+                      Todo funciona como se espera
+                    </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="large-7 small-12 columns dark-block">
+                    <h5>Respuesta exitosa</h5>
+                    <pre class="brush: json;">
+                      {
+                          "version": "v1",
+                          "status": "success",
+                          "status_code": 200,
+                          "message": "success",
+                          "href": "http://dev.api.mensajerosurbanos.com/delivery/calculation",
+                          "data": {
+                              "base_value": 2900, //Valor base
+                              "distance_surcharge": 1000, //recargo distancia
+                              "surcharge_stops": 0, //Recargo paradas
+                              "roundtrip_surcharge": 1000, //Recargo Ida y vuelta
+                              "total_service": 4900, //Valor total del servicio
+                              "total_distance": 3, //Distancia total
+                              "total_surcharge": 2000, //Total Recargos
+                              "stops": 1, //Número de paradas
+                              "add_distancia": 1, //distancia Adicional
+                              "surcharge_KM": 1000, //Valor KM adicional
+                              "roundtrip": 1 //Ida y vuelta 1=si; 0:No
+                        }
+                    }
+                    </pre>
+                </div>
+              </div>
+
+              <div class="large-5 small-12 columns padding-top-1">
+                  <div class="pair row padding-left-1">
+                      <div class="large-5 small-12 columns padding-0">
+                          <span class="property">400 - Bad Request</span>
+                      </div>
+                      <div class="large-7 small-12 columns padding-0">
+                          <span class="value margin-0">
+                              Si alguno de los campos necesarios para hacer el cálculo no se envía se responde de la siguiente manera:
+                          </span>
+                      </div>
+                  </div>
+              </div>
+              <div class="large-7 small-12 columns dark-block">
+                  <pre class="brush: json;">
+                  {
+                      "version": "v1",
+                      "status": "error",
+                      "status_code": 400,
+                      "message": "[type_service] The property type_service is required\n",
+                      "href": "http://dev.api.mensajerosurbanos.com/delivery/calculation"
+                  }
+                  </pre>
+              </div>
+
+              <div class="large-5 small-12 columns" id="linkmag4" data-magellan-target="linkmag4">
+                  <br>
+                  <h5>Crear servicio</h5>
+                  <p>
+                      Corresponde a la funcionalidad encargada de crear el servicio de un cliente en la plataforma de Mensajeros Urbanos
+                  </p>
+              </div>
+              <div class="large-7 small-12 columns dark-block">
+                  <br>
+                  <div class="title">
+                      <h5>Cómo consumir el servicio</h5>
+                  </div>
+                  <div class="pair row">
+                      <div class="large-5 small-12 columns padding-0">
+                          <span class="property">API Endpoint</span>
+                      </div>
+                      <div class="large-7 small-12 columns padding-0">
+                          <span class="value">http://dev.api.mensajerosurbanos.com/delivery/create</span>
+                      </div>
+                  </div>
+                  <div class="pair row">
+                      <div class="large-5 small-12 columns padding-0">
+                          <span class="property">Método de consumo</span>
+                      </div>
+                      <div class="large-7 small-12 columns padding-0">
+                          <span class="value">POST</span>
+                      </div>
+                  </div>
+                  <div class="pair row">
+                      <div class="large-5 small-12 columns padding-0">
+                          <span class="property">Parámetros header</span>
+                      </div>
+                      <div class="large-7 small-12 columns padding-0">
+                          <p class="value margin-0">
+                              <span>Content-Type: application/json</span><br>
+                              <span>access_token: XXXXXX</span><br>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="small-12 columns padding-0">
+                <div class="large-5 small-12 columns">
+                  <h5>Atributos</h5>
+                  <div class="attribute row">
+                    <div class="small-3 columns attr">Nombre</div>
+                    <div class="small-3 columns attr">Tipo</div>
+                    <div class="small-3 columns attr">Descripción</div>
+                    <div class="small-3 columns attr"></div>
+                  </div>
+                  <div class="attribute row">
+                    <div class="small-3 columns attr">id_user</div>
+                    <div class="small-3 columns">Entero</div>
+                    <div class="small-3 columns">ID de usuario</div>
+                    <div class="small-3 columns"></div>
+                  </div>
+                  <div class="attribute row">
+                    <div class="small-3 columns attr">type_service</div>
+                    <div class="small-3 columns">Entero</div>
+                    <div class="small-3 columns">Tipo de servicio</div>
+                    <div class="small-3 columns"></div>
+                  </div>
+                  <div class="attribute row">
+                    <div class="small-3 columns attr">roundtrip</div>
+                    <div class="small-3 columns">Entero</div>
+                    <div class="small-3 columns">Ida y vuelta</div>
+                    <div class="small-3 columns">1 = Si, 0 = No</div>
+                  </div>
+                  <div class="attribute row">
+                    <div class="small-3 columns attr">city</div>
+                    <div class="small-3 columns">Entero</div>
+                    <div class="small-3 columns">Ciudad</div>
+                    <div class="small-3 columns">1=Bogotá, 2=Cali, 3=Medellín, 4=Barranquilla </div>
+                  </div>
+                  <div class="attribute row">
+                    <div class="small-3 columns attr">coordinates type</div>
+                    <div class="small-3 columns">Entero</div>
+                    <div class="small-3 columns"></div>
+                    <div class="small-3 columns">0=Recogida, 1=Entrega</div>
+                  </div>
+                  <div class="attribute row">
+                    <div class="small-3 columns attr">start_date</div>
+                    <div class="small-3 columns">String</div>
+                    <div class="small-3 columns">Fecha de inicio</div>
+                    <div class="small-3 columns"></div>
+                  </div>
+                  <div class="attribute row">
+                    <div class="small-3 columns attr">start_time</div>
+                    <div class="small-3 columns">String</div>
+                    <div class="small-3 columns">Hora de inicio</div>
+                    <div class="small-3 columns"></div>
+                  </div>
+                  <div class="attribute row">
+                    <div class="small-3 columns attr">user_payment_type</div>
+                    <div class="small-3 columns">String</div>
+                    <div class="small-3 columns">Tipo de pago</div>
+                    <div class="small-3 columns">1=EFECTIVO, 2=DATAFONO, 3=ONLINE</div>
+                  </div>
+                  <div class="attribute row">
+                    <div class="small-3 columns attr">type_task_cargo_id</div>
+                    <div class="small-3 columns">Entero</div>
+                    <div class="small-3 columns">Tipo de sevicio</div>
+                    <div class="small-3 columns">2=Normal</div>
+                  </div>
+                  <div class="attribute row">
+                    <div class="small-3 columns attr">coordinates type</div>
+                    <div class="small-3 columns">Entero</div>
+                    <div class="small-3 columns"></div>
+                    <div class="small-3 columns">0=Recogida, 1=Entrega</div>
+                  </div>
+                  <div class="attribute row">
+                    <div class="small-3 columns attr">coordinates id_point</div>
+                    <div class="small-3 columns">Entero</div>
+                    <div class="small-3 columns">Id del  punto</div>
+                    <div class="small-3 columns"></div>
+                  </div>
+                  <div class="attribute row">
+                    <div class="small-3 columns attr">coordinates address</div>
+                    <div class="small-3 columns">String</div>
+                    <div class="small-3 columns">Dirección</div>
+                    <div class="small-3 columns"></div>
+                  </div>
+                  <div class="attribute row">
+                    <div class="small-3 columns attr">coordinates city</div>
+                    <div class="small-3 columns">String</div>
+                    <div class="small-3 columns">Ciudad</div>
+                    <div class="small-3 columns"></div>
+                  </div>
+                  <div class="attribute row">
+                    <div class="small-3 columns attr">coordinates order_id</div>
+                    <div class="small-3 columns">Entero</div>
+                    <div class="small-3 columns">Id del pedido</div>
+                    <div class="small-3 columns"></div>
+                  </div>
+                  <div class="attribute row">
+                    <div class="small-3 columns attr">coordinates description</div>
+                    <div class="small-3 columns">Entero</div>
+                    <div class="small-3 columns">Descripción</div>
+                    <div class="small-3 columns"></div>
+                  </div>
+                  <div class="attribute row">
+                    <div class="small-3 columns attr">coordinates client_data</div>
+                    <div class="small-3 columns">Objeto</div>
+                    <div class="small-3 columns">Datos del cliente final</div>
+                    <div class="small-3 columns"></div>
+                  </div>
+                  <div class="attribute row">
+                    <div class="small-3 columns attr">coordinates client_data products_value</div>
+                    <div class="small-3 columns">Entero</div>
+                    <div class="small-3 columns">Valor Compra</div>
+                    <div class="small-3 columns"></div>
+                  </div>
+                  <div class="attribute row">
+                    <div class="small-3 columns attr">coordinates client_data domicile_value</div>
+                    <div class="small-3 columns">Entero</div>
+                    <div class="small-3 columns">Valor domicilio a cobrar</div>
+                    <div class="small-3 columns"></div>
+                  </div>
+                  <div class="attribute row">
+                    <div class="small-3 columns attr">coordinates client_data payment_type</div>
+                    <div class="small-3 columns">Entero</div>
+                    <div class="small-3 columns">Tipo de pago</div>
+                    <div class="small-3 columns"></div>
+                  </div>
+
+                </div>
+                <div class="large-7 small-12 columns dark-block padding-top-0">
+                  <div class="pair row">
+                      <div class="large-12 small-12 columns padding-0">
+                          <span class="property">Parámetros post-body raw</span>
+                          <pre class="brush: json;">
+                            {
+                               "id_user": XXXX,//ID de usuario
+                               "type_service": 4, //Tipo de servicio
+                               "roundtrip": 1, //Ida y vuelta 1=si; 0:No
+                               "declared_value": 10000, //Valor declarado
+                               "city":1,//1->Bogotá 2->Cali 3->Medellín 4->Barranquilla 5-Villavicencio
+                               "start_date": "2016-01-10", //Fecha Inicio
+                               "start_time": "06:00:00",//Hora Inicio
+                               "user_payment_type":1, //1:EFECTIVO,2:DATAFONO;3:ONLINE
+                               "type_segmentation":1,
+                               "type_task_cargo_id":2,,//Tipo de sevicio, 2->Normal
+                                "observation":"Lorem Ipson dalarm",
+                                "coordinates": [
+                                    {
+                                        "type": "0",//0->Recogida,1->Entrega
+                                        "id_point": "1",//Id del  punto
+                                        "address": "cra 14b 112 45",//Dirección
+                                        "city":"bogota",//Ciudad
+                                        "order_id":34344 //Id de pedido
+                                        "description": "Punto de recogida 1"//Descripción
+                                    },{
+                                        "type": "1",//0->Recogida,1->Entrega
+                                        "address": "cra 15 127 ",//Dirección
+                                        "city":"bogota",//Ciudad
+                                        "order_id":34344 //Id de pedido
+                                        "description": "Punto de entrega",//Descripción
+                                        "client_data": {///Datos cliente Final
+                                            "client_name": "Jhonnatan Acosta",
+                                            "client_phone": "3214567890",
+                                            "client_document":"989839",
+                                            "client_email": "chato@mensajeros.com",
+                                            "products_value": 8700,///Valor Compra
+                                            "domicile_value": 1300,///Valor Domicilio a cobrar
+                                            "payment_type": 1///Tipo de pago,
+                                       },
+                                        "products": [///Productos a Comprar
+                                            {
+                                                "sku": "001",
+                                                "product_name": "Producto 1",
+                                                "url_img": "http://dominiocliente.com/img1.png",
+                                                "value": 2500,
+                                                "quantity": 5,
+                                                "id_point": 1///Id de punto de Compra(id_point punto)
+                                            },
+                                            {
+                                                "sku": "002",
+                                                "product_name": "Producto 2",
+                                                "url_img": "http://dominiocliente.com/img2.png",
+                                                "value": 5000,
+                                                "quantity": 1,
+                                                "id_point": 1
+                                            },
+                                            {
+                                                "sku": "003",
+                                                "product_name": "Producto 3",
+                                                "urm_img": "http://dominiocliente.com/img3.png",
+                                                "value": 1200,
+                                                "quantity": 3,
+                                                "id_point": 2
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                          </pre>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="small-12 columns padding-0">
+                <div class="large-5 small-12 columns padding-top-1">
+                    <h5>Estado HTTP</h5>
+                    <div class="pair row padding-left-1">
+                        <div class="large-5 small-12 columns padding-0">
+                            <span class="property">200 - OK</span>
+                        </div>
+                        <div class="large-7 small-12 columns padding-0">
+                            <span class="value margin-0">
+                      Respuesta exitosa
+                    </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="large-7 small-12 columns dark-block">
+                    <h5>Respuesta exitosa</h5>
+                    <pre class="brush: json;">
+                      {
+                          "version": "v1",
+                          "status": "success",
+                          "status_code": 200,
+                          "message": "success",
+                          "href": "http://52.35.185.13/mu_phalcon_api/delivery/create",
+                          "data": {
+                              "uuid": "576ab8b5e32dd",//Id del servicio
+                              "status": 2,
+                              "total": 6900,/Valor servicio
+                              "date": "2016-06-22 11:11:33",//Fecha de Creacion
+                              "distance": 3//Distancia Total
+                          }
+                      }
+                    </pre>
+                </div>
+              </div>
+
+              <!--div class="large-5 small-12 columns min-h show-for-large"></div>
+              <div class="large-7 small-12 columns dark-block min-h show-for-large"></div>
+              <div class="large-5 small-12 columns min-h show-for-large"></div>
+              <div class="large-7 small-12 columns dark-block min-h show-for-large"></div-->
+            </section>
+        </div>
+    </div>
+  </div>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/what-input/dist/what-input.js"></script>
+    <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

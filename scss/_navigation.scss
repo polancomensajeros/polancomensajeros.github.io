@@ -1,0 +1,40 @@
+.title-bar{
+  background: $light-grey;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  max-height: 50px;
+  color: black;
+  position: fixed !important;
+  .logo{
+    height: 36px;
+  }
+}
+
+.menu.vertical{
+  margin-top: 50px;
+  font-size: 15px;
+  a{
+    color: $font-color;
+  }
+  .active {
+    background: $dark-gray;
+    color: white;
+  }
+  .small-li{
+    padding-top: 0.5em;
+    padding-left: 2.5em;
+    font-weight: 300;
+    font-size: 13px;
+    padding-bottom: 0.5em !important;
+  }
+}
+
+.sticky.is-stuck.is-at-top {
+    width: inherit;
+}
+
+.off-canvas-trigger{
+  font-size: 2.5em !important;
+  color: $dark-gray;
+  margin-top: 2px;
+  padding-left: 0.3em;
+}
